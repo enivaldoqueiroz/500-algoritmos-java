@@ -4,6 +4,11 @@ public class Pessoa {
 	
 		private String nome;
 		private String sobrenome;
+		private int idade;
+		
+		
+		
+		//GETTINS AND SETTINGS
 		public String getNome() {
 			return nome;
 		}
@@ -22,7 +27,7 @@ public class Pessoa {
 		public void setIdade(int idade) {
 			this.idade = idade;
 		}
-		private int idade;
+		
 
 	
 
