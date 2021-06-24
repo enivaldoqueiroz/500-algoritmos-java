@@ -1,3 +1,3 @@
 # 500 Algoritmos Java
 
-# Retirados do livro Introdução à Programação - 500 Algoritmos Resolvidos
+## Retirados do livro IntroduÃ§Ã£o Ã  ProgramaÃ§Ã£o - 500 Algoritmos Resolvidos
