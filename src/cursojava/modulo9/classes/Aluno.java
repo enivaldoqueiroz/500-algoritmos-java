@@ -160,5 +160,25 @@ public class Aluno {
 	public double getMediaNota() {
 		return (nota1 + nota2 + nota3 + nota4)/4;
 	}
+	// TODO Modulo 9 - Aula9.12 - Métodos com retorno se foi aprovado ou não - Inicio
+	public boolean getAlunoAprovado() {
+		double media = this.getMediaNota();
+		if (media >= 70) {
+			return true;
+		} else {
+			return false;
+		}		
+	}
+	
+	public String getAlunoAprovado2() {
+		double media = this.getMediaNota();
+		if (media >= 70) {
+			return "Aluno está aprovado";
+		} else {
+			return "Aluno esta reprovado";
+		}		
+	}
+	// TODO Modulo 9 - Aula9.12 - Métodos com retorno se foi aprovado ou não - Fim
+	
 	// TODO Modulo 9 - Aula9.11 - Primeiro método de calculo de média de nota - Fim
 }
