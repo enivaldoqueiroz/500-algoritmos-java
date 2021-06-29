@@ -20,10 +20,15 @@ public class Main {
 		aluno1.setSerieMatriculado("9");
 		aluno1.setNomeEscola("Escola JDEV Treinamentos");
 		
+		aluno1.setNota1(90);	
+		aluno1.setNota2(80.8);	
+		aluno1.setNota3(70.9);	
+		aluno1.setNota4(90.7);	
 		
 		System.out.println("Nome do aluno 1 é " + aluno1.getNome());
 		System.out.println("Idade é = " + aluno1.getIdade());
 		System.out.println("Nascimento = " + aluno1.getDataNascimento());
+		System.out.println("Media da nota do aluno 1 é " + aluno1.getMediaNota());
 		
 		/*===============================================================*/
 		System.out.println("\n");
