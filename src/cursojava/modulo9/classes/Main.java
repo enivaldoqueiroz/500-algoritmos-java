@@ -43,6 +43,10 @@ public class Main {
 		aluno1.setNota3(Double.parseDouble(nota3));	
 		aluno1.setNota4(Double.parseDouble(nota4));	
 		
+		System.out.println(aluno1.toString()); // Descrição do objeto na memoria
+		System.out.println("Media do aluno = " + aluno1.getMediaNota());
+		System.out.println("Resultado = " + aluno1.getAlunoAprovado2());
+		/*
 		System.out.println("Nome: " + aluno1.getNome());
 		System.out.println("Idade: " + aluno1.getIdade());
 		System.out.println("Nome mãe: " + aluno1.getNomeMae());
@@ -51,7 +55,7 @@ public class Main {
 		System.out.println("Media da nota: " + aluno1.getMediaNota());
 		System.out.println("Resultado: " + (aluno1.getAlunoAprovado() ? "Aprovado" : "Reprovado"));
 		System.out.println("Resultado2: " + aluno1.getAlunoAprovado2());
-		
+		*/
 		/*===============================================================*/
 		/*System.out.println("\n");
 		//Agora temos um objeto real na memoria
