@@ -11,6 +11,7 @@ public class Main {
 		Aluno aluno;
 		
 		//Aula 9.14
+		/*
 		String nome = JOptionPane.showInputDialog("Qual o nome do aluno?");
 		String idade = JOptionPane.showInputDialog("Qual a idade?");
 		String dataNascimento = JOptionPane.showInputDialog("Data de nascimento?");
@@ -56,6 +57,22 @@ public class Main {
 		System.out.println("Resultado: " + (aluno1.getAlunoAprovado() ? "Aprovado" : "Reprovado"));
 		System.out.println("Resultado2: " + aluno1.getAlunoAprovado2());
 		*/
+		
+		/* Aula 9.16 - Equals e hashcode (Diferenciar e comparar objetos)*/
+		Aluno aluno1 = new Aluno();
+		aluno1.setNome("Lana");
+		aluno1.setNumeroCpf("123");
+		
+		Aluno aluno2 = new Aluno();
+		aluno2.setNome("Lana");
+		aluno2.setNumeroCpf("123");
+		
+		if(aluno1.equals(aluno2)) {
+			System.out.println("Aluno são iguais");
+		}else {
+			System.out.println("Alunos não são iguais");
+		}
+		
 		/*===============================================================*/
 		/*System.out.println("\n");
 		//Agora temos um objeto real na memoria
@@ -72,6 +89,8 @@ public class Main {
 		
 		Aluno aluno4 = new Aluno("Jose", 50);
 		*/
+		
+		
 	}
 
 }

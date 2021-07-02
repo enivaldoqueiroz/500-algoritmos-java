@@ -1,5 +1,7 @@
 package cursojava.modulo9.classes;
 
+import java.util.Objects;
+
 //Está é a classe/objeto que representa o Aluno
 
 /* TODO Modulo 9 - Aula 9.5 - Primeira Classe e Objeto Aluno*/
@@ -188,6 +190,23 @@ public class Aluno {
 		}		
 	}
 	// TODO Modulo 9 - Aula9.12 - Métodos com retorno se foi aprovado ou não - Fim
-	
+		
 	// TODO Modulo 9 - Aula9.11 - Primeiro método de calculo de média de nota - Fim
+	
+	@Override
+	public int hashCode() {
+		return Objects.hash(nome, numeroCpf);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Aluno other = (Aluno) obj;
+		return Objects.equals(nome, other.nome) && Objects.equals(numeroCpf, other.numeroCpf);
+	}
 }
