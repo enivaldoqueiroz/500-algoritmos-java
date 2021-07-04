@@ -7,7 +7,7 @@ public class Main {
 	public static void main(String[] args) {
 		// TODO Modulo 9 - Aula9.20 - Criando a lista de disciplinas no objeto Aluno
 		String nome = JOptionPane.showInputDialog("Qual o nome do aluno?");
-		String idade = JOptionPane.showInputDialog("Qual a idade?");
+		/*String idade = JOptionPane.showInputDialog("Qual a idade?");
 		String dataNascimento = JOptionPane.showInputDialog("Data de nascimento?");
 		String rg = JOptionPane.showInputDialog("Qual RG?");
 		String cpf = JOptionPane.showInputDialog("Qual o CPF?");
@@ -15,11 +15,11 @@ public class Main {
 		String pai = JOptionPane.showInputDialog("Nome da pai");
 		String matricula = JOptionPane.showInputDialog("Data da matricula");
 		String serie = JOptionPane.showInputDialog("Qual a seire?");
-		String escola = JOptionPane.showInputDialog("Nome da escola");
+		String escola = JOptionPane.showInputDialog("Nome da escola");*/
 
 		// Aula 9.14
 		Aluno aluno1 = new Aluno();
-		aluno1.setNome(nome);
+		/*aluno1.setNome(nome);
 		aluno1.setIdade(Integer.valueOf(idade));
 		aluno1.setDataNascimento(dataNascimento);
 		aluno1.setRegistroGeral(rg);
@@ -28,7 +28,7 @@ public class Main {
 		aluno1.setNomePai(pai);
 		aluno1.setDataMatricula(matricula);
 		aluno1.setSerieMatriculado(serie);
-		aluno1.setNomeEscola(escola);
+		aluno1.setNomeEscola(escola);*/
 		
 		//Adicionando Disciplina e Nota
 		for(int pos = 1; pos <= 4; pos++ ) {
