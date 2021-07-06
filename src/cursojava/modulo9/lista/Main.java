@@ -67,7 +67,27 @@ public class Main {
 		alunos.add(aluno1);
 		}
 		
-		for (Aluno aluno : alunos) {
+		for(int pos = 0; pos < alunos.size(); pos ++) {
+			
+			Aluno aluno = alunos.get(pos);
+			System.out.println("Aluno = " + aluno.getNome());
+			System.out.println("Média do aluno = " + aluno.getMediaNota());
+			System.out.println("Resultado = " + aluno.getAlunoAprovado2());
+			
+			/* Percorrendo a Lista de Disciplina via Foreach
+			for (Disciplina disc : aluno.getDisciplinas()) {		
+				System.out.println("Materia = " + disc.getDisciplina() + " Nota = " + disc.getNota());
+			}
+			*/
+			
+			for (int posd = 0; posd < aluno.getDisciplinas().size(); posd++) {
+				Disciplina disc = aluno.getDisciplinas().get(posd);
+				System.out.println("Materia = " + disc.getDisciplina() + " Nota = " + disc.getNota());
+			}
+			System.out.println("----------------------------------------------");
+		}
+		
+		/*for (Aluno aluno : alunos) {
 			
 			if(aluno.getNome().equalsIgnoreCase("alex")) {
 				alunos.remove(aluno);
@@ -89,7 +109,9 @@ public class Main {
 			for (Disciplina disciplina : aluno.getDisciplinas()) {
 				System.out.println(disciplina.getDisciplina());
 			}
-		}
+		}*/
+		
+		
 		
 	}
 
