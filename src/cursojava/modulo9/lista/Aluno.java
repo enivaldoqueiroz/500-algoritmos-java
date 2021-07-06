@@ -42,6 +42,10 @@ public class Aluno {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
+	
+	public String getNome() {
+		return this.nome;
+	}
 
 	public String getDataNascimento() {
 		return dataNascimento;
@@ -105,10 +109,6 @@ public class Aluno {
 
 	public void setSerieMatriculado(String serieMatriculado) {
 		this.serieMatriculado = serieMatriculado;
-	}
-
-	public String getNome() {
-		return this.nome;
 	}
 
 	public void setIdade(int idade) {

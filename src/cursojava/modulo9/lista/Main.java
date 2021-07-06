@@ -28,8 +28,8 @@ public class Main {
 
 		// Aula 9.14
 		Aluno aluno1 = new Aluno();
-		/*aluno1.setNome(nome);
-		aluno1.setIdade(Integer.valueOf(idade));
+		aluno1.setNome(nome);
+		/*aluno1.setIdade(Integer.valueOf(idade));
 		aluno1.setDataNascimento(dataNascimento);
 		aluno1.setRegistroGeral(rg);
 		aluno1.setNumeroCpf(cpf);
@@ -40,7 +40,7 @@ public class Main {
 		aluno1.setNomeEscola(escola);*/
 		
 		//Adicionando Disciplina e Nota
-		for(int pos = 1; pos <= 4; pos++ ) {
+		for(int pos = 1; pos <= 2; pos++ ) {
 			String nomeDisciplina = JOptionPane.showInputDialog("Nome da disciplina "+ pos +" ?");
 			String notaDisciplina = JOptionPane.showInputDialog("Nota da disciplina "+ pos +" ?");
 			Disciplina disciplina = new Disciplina();
@@ -68,10 +68,15 @@ public class Main {
 		}
 		
 		for (Aluno aluno : alunos) {
-			System.out.println(aluno); // Descrição do objeto na memoria
-			System.out.println("Media do aluno = " + aluno.getMediaNota());
-			System.out.println("Resultado = " + aluno.getAlunoAprovado2());
-			System.out.println("---------------------------------------------------------------");
+			
+			if(aluno.getNome().equalsIgnoreCase("alex")) {
+				System.out.println(aluno); // Descrição do objeto na memoria
+				System.out.println("Media do aluno = " + aluno.getMediaNota());
+				System.out.println("Resultado = " + aluno.getAlunoAprovado2());
+				System.out.println("---------------------------------------------------------------");
+				break;	
+			}
+			
 		}
 		
 	}
