@@ -1,12 +1,21 @@
 package cursojava.modulo9.lista;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.swing.JOptionPane;
 
 public class Main {
 
 	public static void main(String[] args) {
+		
+		List<Aluno> alunos = new ArrayList<Aluno>();
+		
+		for(int qtd = 1; qtd <= 2; qtd++) {
+			
+				
 		// TODO Modulo 9 - Aula9.20 - Criando a lista de disciplinas no objeto Aluno
-		String nome = JOptionPane.showInputDialog("Qual o nome do aluno?");
+		String nome = JOptionPane.showInputDialog("Qual o nome do aluno " + qtd + " ?");
 		/*String idade = JOptionPane.showInputDialog("Qual a idade?");
 		String dataNascimento = JOptionPane.showInputDialog("Data de nascimento?");
 		String rg = JOptionPane.showInputDialog("Qual RG?");
@@ -55,10 +64,16 @@ public class Main {
 				continuarRemover = JOptionPane.showConfirmDialog(null, "Continuar a remover?");
 			}
 		}
+		alunos.add(aluno1);
+		}
 		
-		System.out.println(aluno1); // Descrição do objeto na memoria
-		System.out.println("Media do aluno = " + aluno1.getMediaNota());
-		System.out.println("Resultado = " + aluno1.getAlunoAprovado2());
+		for (Aluno aluno : alunos) {
+			System.out.println(aluno); // Descrição do objeto na memoria
+			System.out.println("Media do aluno = " + aluno.getMediaNota());
+			System.out.println("Resultado = " + aluno.getAlunoAprovado2());
+			System.out.println("---------------------------------------------------------------");
+		}
+		
 	}
 
 }
