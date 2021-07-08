@@ -1,6 +1,7 @@
 package cursojava.modulo9.lista;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import javax.swing.JOptionPane;
@@ -13,9 +14,12 @@ public class Main {
 		
 		List<Aluno> alunos = new ArrayList<Aluno>();
 		
-		List<Aluno> alunosAprovados = new ArrayList<Aluno>();
+		/* TODO HASHMAP é uma lista que dentro dela temos um a chave que identifica uma sequencia de valores também*/
+		HashMap<String, List<Aluno>> maps = new HashMap<String, List<Aluno>>();
+		
+		/*List<Aluno> alunosAprovados = new ArrayList<Aluno>();
 		List<Aluno> alunosRecuperacao = new ArrayList<Aluno>();
-		List<Aluno> alunosReprovados = new ArrayList<Aluno>();
+		List<Aluno> alunosReprovados = new ArrayList<Aluno>();*/
 		
 		for(int qtd = 1; qtd <= 5; qtd++) {
 			
@@ -73,17 +77,39 @@ public class Main {
 		alunos.add(aluno1);
 		}
 		
+		maps.put(StatusAluno.APROVADO, new ArrayList<Aluno>());
+		maps.put(StatusAluno.RECUPERACAO, new ArrayList<Aluno>());
+		maps.put(StatusAluno.REPROVADO, new ArrayList<Aluno>());
+		
 		for (Aluno aluno : alunos) {
 			if(aluno.getAlunoAprovado2().equalsIgnoreCase(StatusAluno.APROVADO)) {
-				alunosAprovados.add(aluno);
+				maps.get(StatusAluno.APROVADO).add(aluno);
+				//alunosAprovados.add(aluno);
 			}else if(aluno.getAlunoAprovado2().equalsIgnoreCase(StatusAluno.RECUPERACAO)) {
-				alunosRecuperacao.add(aluno);
+				maps.get(StatusAluno.RECUPERACAO).add(aluno);
+				//alunosRecuperacao.add(aluno);
 			}else if(aluno.getAlunoAprovado2().equalsIgnoreCase(StatusAluno.REPROVADO)){
-				alunosReprovados.add(aluno);
+				maps.get(StatusAluno.REPROVADO).add(aluno);
+				//alunosReprovados.add(aluno);
 			}
 		}
 		
 		System.out.println("-----------------  Lista dos Aprovados  -----------------");
+		for (Aluno aluno : maps.get(StatusAluno.APROVADO)) {
+			System.out.println("Nome do aluno " + aluno.getNome() +" Resultado = " + aluno.getAlunoAprovado2() + " com media de = " + aluno.getMediaNota());
+		}
+		
+		System.out.println("-----------------  Lista dos Recuperação  -----------------");
+		for (Aluno aluno : maps.get(StatusAluno.RECUPERACAO)) {
+			System.out.println("Nome do aluno " + aluno.getNome() +" Resultado = " + aluno.getAlunoAprovado2() + " com media de = " + aluno.getMediaNota());
+		}
+		
+		System.out.println("-----------------  Lista dos Reprovados  -----------------");
+		for (Aluno aluno : maps.get(StatusAluno.REPROVADO)) {
+			System.out.println("Nome do aluno " + aluno.getNome() +" Resultado = " + aluno.getAlunoAprovado2() + " com media de = " + aluno.getMediaNota());
+		}
+		
+		/*System.out.println("-----------------  Lista dos Aprovados  -----------------");
 		for (Aluno aluno : alunosAprovados) {
 			System.out.println("Nome do aluno " + aluno.getNome() +" Resultado = " + aluno.getAlunoAprovado2() + " com media de = " + aluno.getMediaNota());
 		}
@@ -96,9 +122,7 @@ public class Main {
 		System.out.println("-----------------  Lista dos Reprovados  -----------------");
 		for (Aluno aluno : alunosReprovados) {
 			System.out.println("Nome do aluno " + aluno.getNome() +" Resultado = " + aluno.getAlunoAprovado2() + " com media de = " + aluno.getMediaNota());
-		}
-		
-		
+		}*/
 		
 		/*for(int pos = 0; pos < alunos.size(); pos ++) {
 			
