@@ -8,19 +8,28 @@ public class TestandoClassesFilhas {
 		Aluno aluno = new Aluno();
 		aluno.setNome("Mila JDev - Treinamento");
 		aluno.setNomeEscola("JDev - Treinamento");
+		aluno.setIdade(21);
+		
 		
 		Diretor diretor = new Diretor();
 		diretor.setRegistroGeral("1q24r56yt6");
 		diretor.setNome("Maia");
-		
+		diretor.setIdade(50);
 		
 		Secretario secretario = new Secretario();
 		secretario.setExperiencia("Administrador");
 		secretario.setNumeroCpf("45461632798");
+		secretario.setIdade(18);
 		
 		System.out.println(aluno);
 		System.out.println(diretor);
 		System.out.println(secretario);
+		
+		
+		System.out.println(aluno.pessoaMaiorIdade()  + " - " + aluno.msgMaiorIdade());
+		System.out.println(diretor.pessoaMaiorIdade() );
+		System.out.println(secretario.pessoaMaiorIdade() );
+		
 				
 
 	}

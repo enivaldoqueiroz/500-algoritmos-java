@@ -45,7 +45,7 @@ public class Aluno extends Pessoa{
 	public int hashCode() {
 		return Objects.hash(dataMatricula, disciplina, nomeEscola, serieMatriculado);
 	}
-	@Override
+	@Override /*Identifica metodo sobreescrita*/
 	public boolean equals(Object obj) {
 		if (this == obj)
 			return true;
@@ -59,6 +59,13 @@ public class Aluno extends Pessoa{
 				&& Objects.equals(serieMatriculado, other.serieMatriculado);
 	}
 	
-	
+	@Override/*Identifica metodo sobreescrita*/
+	public boolean pessoaMaiorIdade() {
+		
+		return idade >= 21;
+	}
 
+	public String msgMaiorIdade() {
+		return this.pessoaMaiorIdade()  ? "Aluno é maior idade" : "Aluno é menor idade";
+	}
 }
