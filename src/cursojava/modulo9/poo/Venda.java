@@ -22,7 +22,7 @@ public class Venda {
 		this.listaProdutos.add(produto);
 	}
 	
-	public double totalVenda() {
+	private double totalVenda() {
 		double total = 0.0;
 		
 		for (Produto produto : listaProdutos) {
@@ -70,6 +70,7 @@ public class Venda {
 	}
 
 	public BigDecimal getValorTotal() {
+		this.valorTotal = BigDecimal.valueOf(totalVenda());
 		return valorTotal;
 	}
 

@@ -42,9 +42,9 @@ public class ExecutarTeste {
 		venda.addProduto(produto3);/*Posso fazer validações antes de adicionar na lista*/
 		venda.addProduto(produto4);
 				
-		System.out.println("Descrição Venda : " + venda.getDescricaoVenda() +
-							" e o total " + venda.totalVenda());
 		
+		
+		System.out.println("Valor da varialvel total venda: " + venda.getValorTotal());
 				
 
 	}
