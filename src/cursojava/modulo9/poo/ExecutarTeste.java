@@ -13,7 +13,20 @@ public class ExecutarTeste {
 		produto1.setNome("Modulo Orientação a Objeto");
 		produto1.setValor(BigDecimal.valueOf(100));
 		
+		Produto produto2 = new Produto();
+		produto2.setId(2L);
+		produto2.setNome("Modulo de Spring Boot API REST");
+		produto2.setValor(BigDecimal.valueOf(300));
 		
+		Produto produto3 = new Produto();
+		produto3.setId(3L);
+		produto3.setNome("Modulo Angular 8");
+		produto3.setValor(BigDecimal.valueOf(100));
+		
+		Produto produto4 = new Produto();
+		produto4.setId(3L);
+		produto4.setNome("Modulo Hibernet 8");
+		produto4.setValor(BigDecimal.valueOf(300));
 		
 		//Venda
 		Venda venda = new Venda();
@@ -21,11 +34,17 @@ public class ExecutarTeste {
 		venda.setEnderecoEntrega("Entrega pelo E-mail");
 		venda.setId(10L);
 		venda.setNomeCliente("Maria Lana");
-		venda.setValorTotal(BigDecimal.valueOf(197.00));
+		//venda.setValorTotal(BigDecimal.valueOf(197.00));
+		
 		
 		venda.getListaProdutos().add(produto1);
+		venda.getListaProdutos().add(produto2); /*Não é possivel fazer validações*/
+		venda.addProduto(produto3);/*Posso fazer validações antes de adicionar na lista*/
+		venda.addProduto(produto4);
+				
+		System.out.println("Descrição Venda : " + venda.getDescricaoVenda() +
+							" e o total " + venda.totalVenda());
 		
-		System.out.println("Descrição Venda : " + venda);
 				
 
 	}

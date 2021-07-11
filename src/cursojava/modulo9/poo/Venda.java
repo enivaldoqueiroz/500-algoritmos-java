@@ -18,6 +18,18 @@ public class Venda {
 	
 	private List<Produto> listaProdutos = new ArrayList<Produto>();
 	
+	public void addProduto (Produto produto) {
+		this.listaProdutos.add(produto);
+	}
+	
+	public double totalVenda() {
+		double total = 0.0;
+		
+		for (Produto produto : listaProdutos) {
+			total += produto.getValor().doubleValue();
+		}
+		return total;
+	}
 	
 	//TODO GETS E SETS
 	
