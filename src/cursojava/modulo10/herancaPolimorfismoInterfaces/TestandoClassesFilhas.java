@@ -30,7 +30,10 @@ public class TestandoClassesFilhas {
 		System.out.println(diretor.pessoaMaiorIdade() );
 		System.out.println(secretario.pessoaMaiorIdade() );
 		
-				
+		Aluno aluno2 = new Aluno();
+		
+		//Não é possivel instalacias uma classe abstrata
+		//Pessoa pessoa = new Pessoa();
 
 	}
 

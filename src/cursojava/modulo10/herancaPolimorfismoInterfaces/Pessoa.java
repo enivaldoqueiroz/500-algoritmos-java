@@ -1,7 +1,7 @@
 package cursojava.modulo10.herancaPolimorfismoInterfaces;
 
 /*Classe pai ou a SuperClasse*/
-public class Pessoa {
+public abstract class Pessoa {
 	
 	protected String nome;
 	protected int idade;
