@@ -20,6 +20,7 @@ public class TestandoClassesFilhas {
 		secretario.setExperiencia("Administrador");
 		secretario.setNumeroCpf("45461632798");
 		secretario.setIdade(18);
+		secretario.setNome("João");
 		
 		System.out.println(aluno);
 		System.out.println(diretor);
@@ -33,11 +34,19 @@ public class TestandoClassesFilhas {
 		System.out.println(" Salario Aluno é = " + aluno.salario());
 		System.out.println(" Salario Secretario é = " + secretario.salario());
 		System.out.println(" Salario Diretor é = " + diretor.salario());
-				
+		
 		//Não é possivel instalacias uma classe abstrata
 		//Pessoa pessoa = new Pessoa();
 		
+		teste(aluno);
+		teste(diretor);
+		teste(secretario);
 
+	}
+	
+	public static void teste(Pessoa pessoa) {
+		System.out.println("Essa pessoa é de mais = " + pessoa.getNome() +
+							" e o salario é de = " + pessoa.salario());
 	}
 
 }
