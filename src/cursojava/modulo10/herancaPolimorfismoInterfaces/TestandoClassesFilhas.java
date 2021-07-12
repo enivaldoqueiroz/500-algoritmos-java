@@ -30,10 +30,13 @@ public class TestandoClassesFilhas {
 		System.out.println(diretor.pessoaMaiorIdade() );
 		System.out.println(secretario.pessoaMaiorIdade() );
 		
-		Aluno aluno2 = new Aluno();
-		
+		System.out.println(" Salario Aluno é = " + aluno.salario());
+		System.out.println(" Salario Secretario é = " + secretario.salario());
+		System.out.println(" Salario Diretor é = " + diretor.salario());
+				
 		//Não é possivel instalacias uma classe abstrata
 		//Pessoa pessoa = new Pessoa();
+		
 
 	}
 
