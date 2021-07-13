@@ -1,10 +1,14 @@
 package cursojava.modulo11.trycatch;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Scanner;
 
+import javax.annotation.processing.FilerException;
 import javax.swing.JOptionPane;
 
 import cursojava.modulo10.herancaPolimorfismoInterfaces.FuncaoAutenticacao;
@@ -16,10 +20,17 @@ import cursojava.modulo9.lista.Disciplina;
 
 public class main {
 
+	@SuppressWarnings("rawtypes")
 	public static void main(String[] args) {
 		
 		try {
 		
+			try {
+				File fil = new File("c://lines.txt");
+				Scanner scanner = new Scanner(fil);
+			} catch (FileNotFoundException e) {
+				throw new ExecaoProcessarNota(e.getMessage());
+			}
 		String login = JOptionPane.showInputDialog("Informe o login");
 		String senha = JOptionPane.showInputDialog("Informe a senha");
 		
