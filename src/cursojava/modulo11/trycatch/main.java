@@ -148,13 +148,19 @@ public class main {
 				saida.append("\n Metodo de erro : " + e.getStackTrace()[i].getMethodName());
 				saida.append("\n Linha de erro : " + e.getStackTrace()[i].getLineNumber());
 				
-				System.out.println("Classe de erro : " + e.getStackTrace()[i].getClassName());
+				/*System.out.println("Classe de erro : " + e.getStackTrace()[i].getClassName());
 				System.out.println("Metodo de erro : " + e.getStackTrace()[i].getMethodName());
-				System.out.println("Linha de erro : " + e.getStackTrace()[i].getLineNumber());
+				System.out.println("Linha de erro : " + e.getStackTrace()[i].getLineNumber());*/
 			}
 			JOptionPane.showMessageDialog(null, "Erro ao processar notas " + saida.toString());
 		} catch (NullPointerException e) {
 			JOptionPane.showMessageDialog(null, "Erro no null pointer exception " + e.getMessage());
+		} catch (Exception e) {
+			e.printStackTrace();
+			JOptionPane.showConfirmDialog(null, "Todos os erros" + e.getClass().getName());
+		}finally {/*Sempre vai ser executado ocorrendo erro ou não*/
+		
+			JOptionPane.showConfirmDialog(null, "Aprendendo JAVA");
 		}
 
 	}
