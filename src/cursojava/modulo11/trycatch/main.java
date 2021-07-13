@@ -34,7 +34,7 @@ public class main {
 		if (autenticao.autenticarCursoJava(permitirAcesso)) {/*Travar o contrato para quem tem autorização*/			
 		
 		
-		List<Aluno> alunos = new ArrayList<Aluno>();
+		List<Aluno> alunos = null;
 		
 		/* TODO HASHMAP é uma lista que dentro dela temos um a chave que identifica uma sequencia de valores também*/
 		HashMap<String, List<Aluno>> maps = new HashMap<String, List<Aluno>>();
@@ -43,7 +43,7 @@ public class main {
 		List<Aluno> alunosRecuperacao = new ArrayList<Aluno>();
 		List<Aluno> alunosReprovados = new ArrayList<Aluno>();*/
 		
-		for(int qtd = 1; qtd <= 5; qtd++) {
+		for(int qtd = 1; qtd <= 2; qtd++) {
 			
 				
 		// TODO Modulo 9 - Aula9.20 - Criando a lista de disciplinas no objeto Aluno
@@ -135,7 +135,7 @@ public class main {
 			JOptionPane.showMessageDialog(null, "Acesso não permitido");
 		}
 		/* Fim do try*/
-		}catch(Exception e){
+		}catch(NumberFormatException e){
 			StringBuilder saida = new StringBuilder();
 			
 			e.printStackTrace();/*Imprime erro no console Java*/
@@ -144,15 +144,17 @@ public class main {
 			
 			for (int i = 0; i <= e.getMessage().length(); i++) {
 				
-				/*saida.append("\n Classe de erro : " + e.getStackTrace()[i].getClassName());
+				saida.append("\n Classe de erro : " + e.getStackTrace()[i].getClassName());
 				saida.append("\n Metodo de erro : " + e.getStackTrace()[i].getMethodName());
-				saida.append("\n Linha de erro : " + e.getStackTrace()[i].getLineNumber());*/
+				saida.append("\n Linha de erro : " + e.getStackTrace()[i].getLineNumber());
 				
 				System.out.println("Classe de erro : " + e.getStackTrace()[i].getClassName());
 				System.out.println("Metodo de erro : " + e.getStackTrace()[i].getMethodName());
 				System.out.println("Linha de erro : " + e.getStackTrace()[i].getLineNumber());
 			}
 			JOptionPane.showMessageDialog(null, "Erro ao processar notas " + saida.toString());
+		} catch (NullPointerException e) {
+			JOptionPane.showMessageDialog(null, "Erro no null pointer exception " + e.getMessage());
 		}
 
 	}
