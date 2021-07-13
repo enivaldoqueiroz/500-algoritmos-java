@@ -6,6 +6,7 @@ import java.util.List;
 
 import javax.swing.JOptionPane;
 
+import cursojava.modulo10.herancaPolimorfismoInterfaces.FuncaoAutenticacao;
 import cursojava.modulo10.herancaPolimorfismoInterfaces.Secretario;
 import cursojava.modulo10.interfaces.PermitirAcesso;
 import cursojava.modulo9.constantes.StatusAluno;
@@ -21,9 +22,11 @@ public class Main {
 		secretario.setLogin(login);
 		secretario.setSenha(senha);*/
 		
+		FuncaoAutenticacao autenticao = new FuncaoAutenticacao();
+		
 		PermitirAcesso permitirAcesso = new Secretario(login, senha);
 				
-		if (permitirAcesso.autenticar()) {/*Se TRUE acess se FALSE não acessa*/			
+		if (autenticao.autenticarCursoJava(permitirAcesso)) {/*Travar o contrato para quem tem autorização*/			
 		
 		
 		List<Aluno> alunos = new ArrayList<Aluno>();
