@@ -2,6 +2,7 @@ package cursojava.modulo11.trycatch;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 
 import javax.swing.JOptionPane;
@@ -135,8 +136,23 @@ public class main {
 		}
 		/* Fim do try*/
 		}catch(Exception e){
-			//e.printStackTrace();/*Imprime erro no console Java*/
-			JOptionPane.showMessageDialog(null, "Erro ao processar notas " + e.getMessage());
+			StringBuilder saida = new StringBuilder();
+			
+			e.printStackTrace();/*Imprime erro no console Java*/
+			
+			System.out.println("Mensagem: " + e.getMessage());
+			
+			for (int i = 0; i <= e.getMessage().length(); i++) {
+				
+				/*saida.append("\n Classe de erro : " + e.getStackTrace()[i].getClassName());
+				saida.append("\n Metodo de erro : " + e.getStackTrace()[i].getMethodName());
+				saida.append("\n Linha de erro : " + e.getStackTrace()[i].getLineNumber());*/
+				
+				System.out.println("Classe de erro : " + e.getStackTrace()[i].getClassName());
+				System.out.println("Metodo de erro : " + e.getStackTrace()[i].getMethodName());
+				System.out.println("Linha de erro : " + e.getStackTrace()[i].getLineNumber());
+			}
+			JOptionPane.showMessageDialog(null, "Erro ao processar notas " + saida.toString());
 		}
 
 	}
