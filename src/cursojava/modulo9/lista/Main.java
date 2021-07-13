@@ -6,6 +6,7 @@ import java.util.List;
 
 import javax.swing.JOptionPane;
 
+import cursojava.modulo10.herancaPolimorfismoInterfaces.Secretario;
 import cursojava.modulo9.constantes.StatusAluno;
 
 public class Main {
@@ -14,10 +15,12 @@ public class Main {
 		
 		String login = JOptionPane.showInputDialog("Informe o login");
 		String senha = JOptionPane.showInputDialog("Informe a senha");
+		
+		Secretario secretario = new Secretario(); /*Diretamente com o abjeto*/
+		secretario.setLogin(login);
+		secretario.setSenha(senha);
 				
-		if (login.equalsIgnoreCase("admin") && 
-				senha.equalsIgnoreCase("admin")) {
-			
+		if (secretario.autenticar()) {/*Se TRUE acess se FALSE não acessa*/			
 		
 		
 		List<Aluno> alunos = new ArrayList<Aluno>();
@@ -191,6 +194,8 @@ public class Main {
 			}
 		}*/
 		
+		}else {
+			JOptionPane.showMessageDialog(null, "Acesso não permitido");
 		}
 		
 	}
