@@ -24,13 +24,9 @@ public class main {
 	public static void main(String[] args) {
 		
 		try {
-		
-			try {
-				File fil = new File("c://lines.txt");
-				Scanner scanner = new Scanner(fil);
-			} catch (FileNotFoundException e) {
-				throw new ExecaoProcessarNota(e.getMessage());
-			}
+			
+			lerArquivo();
+			
 		String login = JOptionPane.showInputDialog("Informe o login");
 		String senha = JOptionPane.showInputDialog("Informe a senha");
 		
@@ -174,6 +170,16 @@ public class main {
 			JOptionPane.showConfirmDialog(null, "Aprendendo JAVA");
 		}
 
+	}
+	
+	public static void lerArquivo() throws ExecaoProcessarNota{
+		try {
+			File fil = new File("c://lines.txt");
+			Scanner scanner = new Scanner(fil);
+		} catch (FileNotFoundException e) {
+			throw new ExecaoProcessarNota(e.getMessage());
+		}
+		
 	}
 
 }
