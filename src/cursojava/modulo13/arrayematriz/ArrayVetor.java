@@ -35,6 +35,22 @@ public class ArrayVetor {
 		
 		aluno.getDisciplinas().add(disciplina2);
 		
+		Aluno[] arrayAlunos = new Aluno[1];
+		
+		arrayAlunos[0] = aluno;
+		
+		for(int pos = 0; pos < arrayAlunos.length; pos++) {
+			System.out.println("Nome do aluno é: " + arrayAlunos[pos].getNome());
+			for (Disciplina d : arrayAlunos[pos].getDisciplinas()) {
+				System.out.println("Nome da disciplina é : " + d.getDisciplina());
+				
+				for(int posnota = 0; posnota < d.getNota().length; posnota++) {
+					System.out.println("A nota nº : " + posnota + " é igual = " + d.getNota()[posnota]);
+				}
+			}
+		}
+		
+		/*
 		//Lista de disciplinas
 		System.out.println("Nome do aluno = " + aluno.getNome() + " inscrito no curso : " + aluno.getNomeEscola());
 		for (Disciplina d : aluno.getDisciplinas()) {
@@ -69,6 +85,7 @@ public class ArrayVetor {
 			System.out.println("A maior nota da Disciplina = " + d.getDisciplina() + " é de valor : " + notaMax);
 			System.out.println("A menor nota da Disciplina = " + d.getDisciplina() + " é de valor : " + notaMin);
 		}
+		*/
 		
 		//disciplina.setNota(null);
 		
