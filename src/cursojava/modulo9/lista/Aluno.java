@@ -127,7 +127,7 @@ public class Aluno {
 		double somaNotas = 0.0;
 		for (Disciplina disciplina : disciplinas) {
 			//somaNotas += disciplina.getNota();
-			somaNotas = somaNotas + disciplina.getNota();
+			somaNotas = somaNotas + disciplina.getMediaNotas();
 		}
 
 		return somaNotas / disciplinas.size();

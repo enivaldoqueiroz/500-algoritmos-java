@@ -4,6 +4,9 @@ import java.util.Iterator;
 
 import javax.swing.JOptionPane;
 
+import cursojava.modulo9.lista.Aluno;
+import cursojava.modulo9.lista.Disciplina;
+
 public class ArrayVetor {
 	
 	/*Usado para executar código*/
@@ -11,10 +14,32 @@ public class ArrayVetor {
 		
 		/*TODO Array pode ser de todos o tipos de dados e objetos também*/
 		
-		String posicaes = JOptionPane.showInputDialog("Quantas posições o array deve ter?");
+		double[] notas = {8.8, 9.7,7.6,6.8};
+		double[] notasLogica = {7.1, 5.7, 9.6, 7.8};
+		
+		//Criação do aluno
+		Aluno aluno = new Aluno();
+		aluno.setNome("Enivaldo Queiroz");
+		aluno.setNomeEscola("JDEV Treinamento");
+		
+		//Criação da disciplina
+		Disciplina disciplina = new Disciplina();
+		disciplina.setDisciplina("Curso de Java");
+		disciplina.setNota(notas);
+		
+		aluno.getDisciplinas().add(disciplina);
+		
+		Disciplina disciplina2 = new Disciplina();
+		disciplina2.setDisciplina("Calculo II");
+		disciplina2.setNota(notasLogica);
+		
+		aluno.getDisciplinas().add(disciplina2);
+		//disciplina.setNota(null);
+		
+		//String posicaes = JOptionPane.showInputDialog("Quantas posições o array deve ter?");
 		
 		/*Array sem deve ter a quantidade de posições definidas*/
-		double[] notas = new double[Integer.parseInt(posicaes)];
+		/*double[] notas = new double[Integer.parseInt(posicaes)];
 		
 		for (int pos = 0; pos < notas.length; pos++) {
 			String valor = JOptionPane.showInputDialog("Qual o valor da posição = " + (pos + 1));
@@ -23,7 +48,7 @@ public class ArrayVetor {
 		
 		for(int pos = 0; pos <notas.length; pos++) {
 			System.out.println("Nota " + (pos + 1) + " é = " + notas[pos]);
-		}
+		}*/
 		
 		/*Atribuir valores na posição do array*/
 		/*notas[0] = 7.8;
