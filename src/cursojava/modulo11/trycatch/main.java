@@ -25,7 +25,7 @@ public class main {
 		
 		try {
 			
-			lerArquivo();
+			//lerArquivo();
 			
 		String login = JOptionPane.showInputDialog("Informe o login");
 		String senha = JOptionPane.showInputDialog("Informe a senha");
@@ -41,7 +41,7 @@ public class main {
 		if (autenticao.autenticarCursoJava(permitirAcesso)) {/*Travar o contrato para quem tem autorização*/			
 		
 		
-		List<Aluno> alunos = null;
+		List<Aluno> alunos = new ArrayList<Aluno>();
 		
 		/* TODO HASHMAP é uma lista que dentro dela temos um a chave que identifica uma sequencia de valores também*/
 		HashMap<String, List<Aluno>> maps = new HashMap<String, List<Aluno>>();
