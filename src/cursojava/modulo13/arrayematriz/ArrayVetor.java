@@ -34,6 +34,19 @@ public class ArrayVetor {
 		disciplina2.setNota(notasLogica);
 		
 		aluno.getDisciplinas().add(disciplina2);
+		
+		//Lista de disciplinas
+		System.out.println("Nome do aluno = " + aluno.getNome() + " inscrito no curso : " + aluno.getNomeEscola());
+		for (Disciplina d : aluno.getDisciplinas()) {
+			System.out.println("------------------- Disciplinas do aluno -------------------");
+			System.out.println("Disciplina : " + d.getDisciplina());
+			System.out.println("As notas da disciplina são: ");
+			//Percorrendo as notas das disciplinas
+			for(int pos = 0; pos < d.getNota().length; pos++) {
+				System.out.println("Nota " + (pos + 1) + " é " + d.getNota()[pos]);
+			}
+		}
+		
 		//disciplina.setNota(null);
 		
 		//String posicaes = JOptionPane.showInputDialog("Quantas posições o array deve ter?");
