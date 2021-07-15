@@ -21,7 +21,7 @@ public class Matriz {
 		//Percorrer as linhas
 		for(int poslinha = 0; poslinha < notas.length; poslinha++) {
 			System.out.println("===================================");
-			//Percorrer as colunas
+			//Percorrer cada uma das colunas
 			for(int poscoluna = 0; poscoluna < notas[poslinha].length; poscoluna++) {
 				System.out.println("Valor da matriz: " + notas[poslinha][poscoluna]);
 			}
