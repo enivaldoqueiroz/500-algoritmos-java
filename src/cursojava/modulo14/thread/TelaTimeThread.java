@@ -46,7 +46,24 @@ public class TelaTimeThread extends JDialog {
 		}
 	};
 	
+	private Runnable thread2 = new Runnable() {
+		
+		@Override
+		public void run() {
+			while(true) {//Ficará sempres rodando
+				mostraTempo2.setText(new SimpleDateFormat("dd-MM-yyyy hh:mm:ss").format(Calendar.getInstance().getTime()));
+				try {
+					Thread.sleep(3000);
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+			}
+			
+		}
+	};
+	
 	private Thread threadTime1;
+	private Thread threadTime2;
 
 	public TelaTimeThread() {// Executa o que estiver dentro no momento da abertura ou execução
 		setTitle("Minha Tela de time com Thread");
@@ -97,6 +114,11 @@ public class TelaTimeThread extends JDialog {
 				threadTime1 = new Thread(thread1);
 				threadTime1.start();
 				
+				threadTime2 = new Thread(thread2);
+				threadTime2.start();
+				
+				jButton1.setEnabled(false);
+				jButton2.setEnabled(true);
 			}
 		});
 		
@@ -105,9 +127,15 @@ public class TelaTimeThread extends JDialog {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				threadTime1.stop();
+				threadTime2.stop();
+				
+				jButton1.setEnabled(true);
+				jButton2.setEnabled(false);
 				
 			}
 		});
+		
+		jButton2.setEnabled(false);
 	
 		add(jPanel, BorderLayout.WEST);
 		
