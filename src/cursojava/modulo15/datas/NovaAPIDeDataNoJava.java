@@ -21,7 +21,8 @@ public class NovaAPIDeDataNoJava {
 		LocalDateTime dataAtualHoraAtual = LocalDateTime.now();
 		
 		//System.out.println("Hora e Data : " + dataAtualHoraAtual);
-		System.out.println("Data e hora atual : " + new SimpleDateFormat("dd-MM-yyyy").format(dataAtualHoraAtual.toLocalDate()));
+		System.out.println("Data e hora atual : " 
+		+ new SimpleDateFormat("dd-MM-yyyy").format(dataAtualHoraAtual.toLocalDate()));
 		
 		
 	}
